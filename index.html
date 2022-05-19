@@ -17,11 +17,14 @@
 
 <body class="bg-light">
 
+
+
   <div class="container">
     <main>
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
           alt="" width="72" height="57">
+        <h1>Bootstrap</h1>
         <h2>Checkout form</h2>
         <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group
           has a validation state that can be triggered by attempting to submit the form without completing it.</p>
@@ -70,7 +73,8 @@
 
           <form class="card p-2">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Promo code">
+              <label for="promocode">Promo code:</label> 
+              <input type="text" class="form-control" name="promocode">
               <button type="submit" class="btn btn-secondary">Redeem</button>
             </div>
           </form>
@@ -160,35 +164,27 @@
 
             <hr class="my-4">
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="same-address">
-              <label class="form-check-label" for="same-address">Shipping address is the same as my billing
-                address</label>
-            </div>
-
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="save-info">
-              <label class="form-check-label" for="save-info">Save this information for next time</label>
-            </div>
+            <fieldset class="form-check">
+              <legend>Other options: </legend>
+                <input type="checkbox" class="form-check-input" id="same-address">
+                <label class="form-check-label" for="same-address">Shipping address is the same as my billing
+                  address</label><br />
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Save this information for next time</label><br />
+            </fieldset>
 
             <hr class="my-4">
 
-            <h4 class="mb-3">Payment</h4>
-
-            <div class="my-3">
-              <div class="form-check">
+            
+              <fieldset class="my-3 form-check">
+                <legend>Payment: </legend>
                 <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-                <label class="form-check-label" for="credit">Credit card</label>
-              </div>
-              <div class="form-check">
+                <label class="form-check-label" for="credit">Credit card</label><br />
                 <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                <label class="form-check-label" for="debit">Debit card</label>
-              </div>
-              <div class="form-check">
+                <label class="form-check-label" for="debit">Debit card</label><br />
                 <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-                <label class="form-check-label" for="paypal">PayPal</label>
-              </div>
-            </div>
+                <label class="form-check-label" for="paypal">PayPal</label><br />
+              </fieldset>
 
             <div class="row gy-3">
               <div class="col-md-6">
